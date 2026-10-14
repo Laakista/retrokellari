@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retrokellari Tampereella — 80- ja 90-lukujen pelikoneet ja nostalgiatila ryhmällesi</title>
+  <meta name="description"
+    content="Varaa nostalgiatrippi ryhmällesi! Yli 30 legendaarista pelikonetta, aitoja kuvaputkinäyttöjä, leffalounge ja omat juomat Tampereen Kalevassa." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Retrokellari Tampereella | koneet.net" />
+  <meta property="og:description"
+    content="Varaa nostalgiatrippi ryhmällesi! Yli 30 legendaarista pelikonetta ja aito retroilmapiiri Tampereen Kalevassa." />
+  <meta property="og:image" content="./assets/images/retrokellari-1.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/koneet-logo.svg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- Yläpalkki -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <span class="brand-label"><span>RETRO</span>KELLARI</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#koneet" class="nav-link">Pelikoneet</a>
+        <a href="#miljoo" class="nav-link">Galleria</a>
+        <a href="#speksit" class="nav-link">Speksit</a>
+        <a href="#varaa" class="header-cta-btn">Hinta &amp; varaus</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO-OSIO TILAKUVALLA JA SYVYYSELLÄ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-parallax-bg" id="hero-bg" aria-hidden="true"></div>
+      <div class="hero-cinematic-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          <span>Tampereella on retropelien kotipesä</span>
+        </div>
+
+        <h1 class="hero-title">
+          Varaa nostalgiatrippi <span class="hero-title-gradient">ryhmällesi.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Tilasta löydät <strong>80-90-lukujen pelikoneet ja pelit</strong> sekä saman kulta-ajan
+          parhaat leffat, lehdet ja julisteet – aivan keskustan tuntumassa.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#laskuri" class="btn-primary">
+            Laske hinta &amp; varaa
+          </a>
+          <a href="#koneet" class="btn-secondary">
+            Tutustu valikoimaan
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 MYYNTIVALTTIA (PIKAFAKTAT) -->
+    <section class="quick-pitch-section">
+      <div class="container">
+        <div class="pitch-grid">
+          <div class="pitch-card reveal-on-scroll">
+            <div class="pitch-number">01 / AITO RAUTA</div>
+            <h3 class="pitch-title">Ei emulaattoreita</h3>
+            <p class="pitch-desc">
+              Alkuperäiset mikrotietokoneet, pelikonsolit, CRT-kuvaputkimonitorit, lerput ja autenttiset ohjaimet. Tunne
+              ja kuule aito 80- ja 90-lukujen tekniikka.
+            </p>
+          </div>
+
+          <div class="pitch-card reveal-on-scroll">
+            <div class="pitch-number">02 / HELPPO TULLA</div>
+            <h3 class="pitch-title">Hovimestari opastaa</h3>
+            <p class="pitch-desc">
+              Ei säätöä eikä komentorivien muistelua! Hovimestari perehdyttää koneiden käyttöön ja virittää toivomanne
+              suosikkipelit valmiiksi käyntiin.
+            </p>
+          </div>
+
+          <div class="pitch-card reveal-on-scroll">
+            <div class="pitch-number">03 / OMA RAUHA</div>
+            <h3 class="pitch-title">Omat virvokkeet</h3>
+            <p class="pitch-desc">
+              Käytössänne on tilava jääkaappi omille juomille ja eväille. Maltillinen alkoholin nauttiminen on sallittua
+              — täydellinen peli-iltoihin ja virkistyspäiviin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- VÄRIKOODATTU KONEVALIKOIMA (1PX REUNUKSET) -->
+    <section class="catalog-section" id="koneet">
+      <div class="container">
+        <div class="section-header-compact reveal-on-scroll">
+          <span class="section-tag">Aikakone 1979–1999</span>
+          <h2 class="section-title-large">Yli 30 legendaarista pelikonetta</h2>
+          <p class="section-lead-compact">
+            Esillä on aina kattava kattaus, mutta voit poimia alta suosikkisi varaukseen mukaan.
+          </p>
+        </div>
+
+        <div class="catalog-top-controls reveal-on-scroll">
+          <!-- Haku -->
+          <div class="search-input-wrapper">
+            <span class="search-icon-svg">🔍</span>
+            <input type="text" id="search-machines" class="search-input-modern"
+              placeholder="Etsi koneen nimellä, pelillä tai vuodella (esim. Amiga, Nintendo, Doom)..."
+              aria-label="Etsi laitteita" />
+          </div>
+
+          <!-- Värikoodatut filtterinapit -->
+          <div class="filter-tabs-row" role="tablist">
+            <button type="button" class="filter-btn filter-all active" data-category="all">Kaikki (33)</button>
+            <button type="button" class="filter-btn filter-konsoli" data-category="konsoli">Pelikonsolit</button>
+            <button type="button" class="filter-btn filter-mikro" data-category="mikro">Kotitietokoneet</button>
+            <button type="button" class="filter-btn filter-pc" data-category="pc">PC &amp; MikroMikot</button>
+            <button type="button" class="filter-btn filter-vintage" data-category="vintage">Vintage &amp;
+              spessut</button>
+          </div>
+        </div>
+
+        <!-- Ruudukko (app.js luo värikoodatut 1px-reunuksilla varustetut kortit) -->
+        <div class="machines-grid-modern" id="machines-grid">
+          <!-- Ladataan dynaamisesti -->
+        </div>
+      </div>
+    </section>
+
+    <!-- MILJÖÖ & TILANKUVAT -->
+    <!-- MILJÖÖ & TILANKUVAT - SUURI SLIDER -->
+    <section class="gallery-section" id="miljoo">
+      <div class="container">
+        <div class="section-header-compact reveal-on-scroll">
+          <h2 class="section-title-large">Kurkista kellariin</h2>
+          <p class="section-lead-compact">
+            Aitojen kuvaputkien hehku ja vimpan päälle nostalginen fiilis taattu.
+          </p>
+        </div>
+
+        <div class="gallery-slider-wrapper reveal-on-scroll">
+          <div class="gallery-slider-viewport" id="gallery-slider-viewport" tabindex="0" role="region"
+            aria-label="Kuvakatsaus tiloihin">
+            <div class="gallery-slider-track" id="gallery-slider-track">
+              <!-- Slide 1 -->
+              <div class="gallery-slide" data-index="0" data-src="./assets/images/retrokellari-1.jpg">
+                <img src="./assets/images/retrokellari-1.jpg" alt="Pääpelisali ja retrokoneiden rivistö"
+                  loading="eager" />
+                <div class="gallery-slide-caption">
+                  <div class="caption-text">
+                    <span class="caption-badge">Sohvalounge</span>
+                    <h3 class="caption-title">Pelit ja leffat odottavat</h3>
+                    <p class="caption-desc">Nuoruutesi aarteet ovat elossa ja voivat oikein hyvin. Palaa sinäkin kotiin.
+                    </p>
+                  </div>
+                  <button type="button" class="btn-slide-zoom" data-src="./assets/images/retrokellari-1.jpg"
+                    aria-label="Avaa täysikokoisena">
+                    <span>🔍</span> Täysikoko
+                  </button>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="gallery-slide" data-index="1" data-src="./assets/images/retrokellari-2.jpg">
+                <img src="./assets/images/retrokellari-2.jpg" alt="Aitojen CRT-näyttöjen loisto" loading="lazy" />
+                <div class="gallery-slide-caption">
+                  <div class="caption-text">
+                    <span class="caption-badge">Nörttineukkari</span>
+                    <h3 class="caption-title">Ai ettien että mitä tehokkuutta</h3>
+                    <p class="caption-desc">Näillä avaruusajan työkaluilla sai tukevan otteen tulevaisuuden utopiasta.
+                    </p>
+                  </div>
+                  <button type="button" class="btn-slide-zoom" data-src="./assets/images/retrokellari-2.jpg"
+                    aria-label="Avaa täysikokoisena">
+                    <span>🔍</span> Täysikoko
+                  </button>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="gallery-slide" data-index="2" data-src="./assets/images/retrokellari-3.jpg">
+                <img src="./assets/images/retrokellari-3.jpg" alt="Konsolinurkkaus ja VHS-lounge" loading="lazy" />
+                <div class="gallery-slide-caption">
+                  <div class="caption-text">
+                    <span class="caption-badge">Pelimyllyt</span>
+                    <h3 class="caption-title">Pöytäkoneet kaikilla herkuilla</h3>
+                    <p class="caption-desc">Näitä virityksiä sitä kuolattiin ja vieläkin herahtaa vesi kielelle.</p>
+                  </div>
+                  <button type="button" class="btn-slide-zoom" data-src="./assets/images/retrokellari-3.jpg"
+                    aria-label="Avaa täysikokoisena">
+                    <span>🔍</span> Täysikoko
+                  </button>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="gallery-slide" data-index="3" data-src="./assets/images/retrokellari-4.jpg">
+                <img src="./assets/images/retrokellari-4.jpg" alt="Kotitietokoneiden kultakausi" loading="lazy" />
+                <div class="gallery-slide-caption">
+                  <div class="caption-text">
+                    <span class="caption-badge">Konsolinurkka</span>
+                    <h3 class="caption-title">Sukella konsolipelaamisen sulaan ytimeen</h3>
+                    <p class="caption-desc">Vapauta mielesi, vetreytä peukalosi ja pikselöidy!</p>
+                  </div>
+                  <button type="button" class="btn-slide-zoom" data-src="./assets/images/retrokellari-4.jpg"
+                    aria-label="Avaa täysikokoisena">
+                    <span>🔍</span> Täysikoko
+                  </button>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="gallery-slide" data-index="4" data-src="./assets/images/retrokellari-5.jpg">
+                <img src="./assets/images/retrokellari-5.jpg" alt="Nostalginen miljöö ja rekvisiitta" loading="lazy" />
+                <div class="gallery-slide-caption">
+                  <div class="caption-text">
+                    <span class="caption-badge">Klassikkobattle</span>
+                    <h3 class="caption-title">Kuka on Pongin suurruhtinas?</h3>
+                    <p class="caption-desc">Teitte sitten mitä tahansa muuta, tätä mittelöä on hiukkasen vaikea ohittaa.
+                    </p>
+                  </div>
+                  <button type="button" class="btn-slide-zoom" data-src="./assets/images/retrokellari-5.jpg"
+                    aria-label="Avaa täysikokoisena">
+                    <span>🔍</span> Täysikoko
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nuoliohjaimet -->
+            <button type="button" class="slider-nav-btn prev" id="slider-btn-prev" aria-label="Edellinen kuva">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="slider-nav-btn next" id="slider-btn-next" aria-label="Seuraava kuva">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Laskuri -->
+            <div class="slider-counter" id="slider-counter">
+              <span id="slider-counter-cur">01</span> / <span id="slider-counter-total">05</span>
+            </div>
+          </div>
+
+          <!-- Pikkukuvapalkki -->
+          <div class="gallery-thumbs-row" id="gallery-thumbs-row" role="tablist" aria-label="Kuvagallerian pikkukuvat">
+            <button type="button" class="slider-thumb-btn active" data-index="0" role="tab" aria-selected="true"
+              aria-label="Näytä kuva 1: Shovalounge">
+              <img src="./assets/images/retrokellari-1.jpg" alt="" class="thumb-img" />
+              <span class="thumb-title">Sohvalounge</span>
+            </button>
+            <button type="button" class="slider-thumb-btn" data-index="1" role="tab" aria-selected="false"
+              aria-label="Näytä kuva 2: Nörttineukkari">
+              <img src="./assets/images/retrokellari-2.jpg" alt="" class="thumb-img" />
+              <span class="thumb-title">Nörttineukkari</span>
+            </button>
+            <button type="button" class="slider-thumb-btn" data-index="2" role="tab" aria-selected="false"
+              aria-label="Näytä kuva 3: Pelimyllyt">
+              <img src="./assets/images/retrokellari-3.jpg" alt="" class="thumb-img" />
+              <span class="thumb-title">Pelimyllyt</span>
+            </button>
+            <button type="button" class="slider-thumb-btn" data-index="3" role="tab" aria-selected="false"
+              aria-label="Näytä kuva 4: Konsolinurkka">
+              <img src="./assets/images/retrokellari-4.jpg" alt="" class="thumb-img" />
+              <span class="thumb-title">Konsolinurkka</span>
+            </button>
+            <button type="button" class="slider-thumb-btn" data-index="4" role="tab" aria-selected="false"
+              aria-label="Näytä kuva 5: Klassikkobattle">
+              <img src="./assets/images/retrokellari-5.jpg" alt="" class="thumb-img" />
+              <span class="thumb-title">Klassikkobattle</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEKSIT & SIJAINTI -->
+    <section class="specs-section" id="speksit">
+      <div class="container">
+        <div class="section-header-compact reveal-on-scroll">
+          <h2 class="section-title-large">Speksit ja saapuminen</h2>
+          <p class="section-lead-compact">
+            Kaikki tarvittava tieto tilan varustelusta, ryhmäkoosta ja sujuvasta saapumisesta.
+          </p>
+        </div>
+
+        <div class="specs-grid-layout">
+          <!-- Speksit-kortti -->
+          <div class="specs-card-box reveal-on-scroll">
+
+            <div class="specs-feature-list">
+              <div class="specs-feature-item">
+                <div class="specs-feature-content">
+                  <strong>Kapasiteetti 8–12 henkilöä</strong>
+                  <p>Kokous- ja pelipöytään mahtuu 8–10 hlö, leffakatsomoon 4–5 hlö. Koko tila on ryhmäsi
+                    yksityiskäytössä.</p>
+                </div>
+              </div>
+
+              <div class="specs-feature-item">
+                <div class="specs-feature-content">
+                  <strong>Omat virvokkeet &amp; jääkaappi</strong>
+                  <p>Käytössänne on tilava jääkaappi omille juomille ja eväille. Maltillinen alkoholin nauttiminen on
+                    sallittua.</p>
+                </div>
+              </div>
+
+              <div class="specs-feature-item">
+                <div class="specs-feature-content">
+                  <strong>VHS- &amp; Laserdisc -lounge</strong>
+                  <p>Aitojen retroleffojen katsomo, alan kultakauden lehdet, julisteet ja rento oleskelualue taukoja
+                    varten.</p>
+                </div>
+              </div>
+
+              <div class="specs-feature-item">
+                <div class="specs-feature-content">
+                  <strong>Aulatila &amp; biljardi</strong>
+                  <p>Sisäänkäynti käy avaran aulan kautta, josta löytyy mm. biljardipöytä (käytöstä sovitaan erikseen).
+                  </p>
+                </div>
+              </div>
+
+              <div class="specs-feature-item">
+                <div class="specs-feature-content">
+                  <strong>Liikkuva kattaus mahdollinen</strong>
+                  <p>Haluatko pelikoneet yrityksen toimistolle tai muuhun juhlatilaan? Koneet liikkuvat tarvittaessa
+                    luoksenne!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sijainti & Saapuminen -kortti -->
+          <div class="location-card-box reveal-on-scroll">
+
+            <div class="location-map-wrap">
+              <a href="https://maps.app.goo.gl/TuD98hf6H8wPShg69" target="_blank" rel="noopener noreferrer"
+                title="Avaa reittiohjeet Google Mapsissa">
+                <img src="./assets/images/retrokellari-kartta.jpg" alt="Retrokellarin sijainti Tampereen Sammonkadulla"
+                  loading="lazy" />
+                <span class="map-action-overlay">Avaa Google Maps ↗</span>
+              </a>
+            </div>
+            <div class="specs-address">
+              <strong>Sammonkatu 8 lt. 13, 33540 Tampere</strong>
+            </div>
+
+            <div class="transit-details-list">
+              <div class="transit-item">
+                <div><strong>Ratikalla:</strong> Linjat 1 ja 3 tulevat 200 m päähän.</div>
+              </div>
+              <div class="transit-item">
+                <div><strong>Autolla:</strong> Paljon 2 ja 4 tunnin kiekkopaikkoja katujen varressa.</div>
+              </div>
+              <div class="transit-item">
+                <div><strong>Keskustasta:</strong> Noin 10 minuutin rento kävely rautatieasemalta.
+                </div>
+              </div>
+            </div>
+
+            <div class="specs-arrival-tip">
+              <div class="specs-arrival-tip-header">
+                <span>⚠️</span> TÄRKEÄ SAAPUMISOHJE
+              </div>
+              <p>
+                Piha on aidattu Kaskitien puolelta, joten saavuthan taloyhtiön parkkipaikan perälle aina
+                <strong>Sammonkadun kautta</strong>!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HINTALASKURI & VARAUSPYYNTÖLOMAKE -->
+    <section class="booking-section" id="varaa">
+      <div id="laskuri" class="scroll-anchor"></div>
+      <div class="container">
+        <div class="section-header-compact reveal-on-scroll">
+          <h2 class="section-title-large">Tee varauspyyntö</h2>
+          <p class="section-lead-compact">
+            Valitse päivä, kesto ja väkimäärä. Näet hinnan heti ja ajan varmistamme pikapuoliin.
+          </p>
+        </div>
+
+        <form id="direct-booking-form" class="reveal-on-scroll">
+          <div class="booking-combined-grid">
+            <!-- Sarake 1: Hintalaskuri & reaaliaikainen hinta -->
+            <div class="booking-calc-column">
+              <h3 class="booking-col-heading">Valitse ajankohta &amp; kesto</h3>
+
+              <!-- 1. Päivämäärävalinta -->
+              <div class="calc-date-group">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
+                  <label for="form-date" class="form-label" style="margin-bottom: 0;">Valitse päivä</label>
+                  <span class="date-hint-tag" id="date-hint-tag">Valitse päivä kalenterista</span>
+                </div>
+                <input type="date" id="form-date" class="form-control-input calc-date-input" />
+              </div>
+
+              <!-- 2. Slider: Kesto -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="slider-label">Varauksen kesto</span>
+                  <span class="slider-val-bubble" id="val-hours">3 tuntia</span>
+                </div>
+                <input type="range" id="slider-hours" class="custom-range" min="3" max="8" step="1" value="3" />
+                <div class="slider-ticks">
+                  <span>3 h (minimi)</span>
+                  <span>4 h</span>
+                  <span>5 h</span>
+                  <span>6 h</span>
+                  <span>7 h</span>
+                  <span>8 h</span>
+                </div>
+              </div>
+
+              <!-- 3. Slider: Ryhmän koko -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="slider-label">Väkimäärä</span>
+                  <span class="slider-val-bubble" id="val-group">8 henkeä</span>
+                </div>
+                <input type="range" id="slider-group" class="custom-range" min="2" max="12" step="1" value="8" />
+                <div class="slider-ticks">
+                  <span>2 hlö</span>
+                  <span>4 hlö</span>
+                  <span>6 hlö</span>
+                  <span>8 hlö</span>
+                  <span>10 hlö</span>
+                  <span>12 hlö</span>
+                </div>
+              </div>
+
+              <!-- Hintayhteenveto -->
+              <div class="calc-live-price-box">
+                <div class="calc-price-row total-row">
+                  <span class="price-row-label">Kokonaishinta</span>
+                  <span class="price-row-val total-val" id="total-price">195 €</span>
+                </div>
+                <div class="calc-price-row per-person-row">
+                  <span class="price-row-label">Hinta per henkilö</span>
+                  <span class="price-row-val per-person-val" id="per-person-price">~24 €</span>
+                </div>
+                <p class="result-detail-text" id="pricing-note">
+                  Sisältää tilan, pelikoneet ja hovimestarin alkuopastuksen.
+                </p>
+              </div>
+            </div>
+
+            <!-- Sarake 2: Yhteystiedot ja varauspyyntö -->
+            <div class="booking-form-column">
+              <h3 class="booking-col-heading">Täytä yhteystiedot</h3>
+
+              <div class="booking-inputs-grid">
+                <div class="form-field-group form-full-width">
+                  <label for="form-name" class="form-label">Nimi tai ryhmä *</label>
+                  <input type="text" id="form-name" class="form-control-input" required
+                    placeholder="Etunimi Sukunimi tai Yritys" />
+                </div>
+
+                <div class="form-field-group">
+                  <label for="form-phone" class="form-label">Puhelinnumero *</label>
+                  <input type="tel" id="form-phone" class="form-control-input" required placeholder="040 123 4567" />
+                </div>
+
+                <div class="form-field-group">
+                  <label for="form-email" class="form-label">Sähköpostiosoite *</label>
+                  <input type="email" id="form-email" class="form-control-input" required
+                    placeholder="osoite@yritys.fi" />
+                </div>
+
+                <div class="form-field-group form-full-width">
+                  <label for="form-wishlist" class="form-label">Toivotut koneet ja pelit</label>
+                  <input type="text" id="form-wishlist" class="form-control-input"
+                    placeholder="Voit valita koneita yltä '+ Toivo tätä konetta' tai kirjoittaa esim. Amiga 500, Mario Kart, Doom..." />
+                </div>
+
+                <div class="form-field-group form-full-width">
+                  <label for="form-notes" class="form-label">Vapaamuotoinen viesti tai toiveet</label>
+                  <textarea id="form-notes" class="form-control-input"
+                    placeholder="Kerro lyhyesti tilaisuuden luonteesta tai kysymyksistä..."></textarea>
+                </div>
+
+                <div class="booking-actions-row">
+                  <button type="submit" class="btn-primary" id="btn-submit-mail">
+                    Lähetä lomake
+                  </button>
+                  <a href="mailto:info@koneet.net" class="link-subtle" style="margin-left: auto;">
+                    Tai laita suora sähköposti info@koneet.net ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>koneet.net — Retrokellari Tampere</strong> • Sammonkatu 8 lt. 13, 33540 Tampere
+      </div>
+      <div>
+        <a href="mailto:info@koneet.net" style="color: var(--primary-accent); margin-right: 1.5rem;">info@koneet.net</a>
+        <a href="#hero" style="color: var(--text-muted);">Ylös ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-modal" id="gallery-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button type="button" class="lightbox-close-btn" id="lightbox-close" aria-label="Sulje">&times;</button>
+    <img src="" alt="" id="lightbox-display-img" />
+  </div>
+
+  <!-- Sovelluslogiikka -->
+  <script type="module" src="./app.js"></script>
+</body>
+
+</html>

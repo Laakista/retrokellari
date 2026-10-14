@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konekokoelma (1979–1999) — Retrokellari Tampere</title>
+  <meta name="description" content="Kaikki Retrokellarin 33 legendaarista pelikonetta ja kotitietokonetta vuosilta 1979–1999." />
+  
+  <link rel="icon" type="image/svg+xml" href="./assets/images/koneet-logo.svg" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Luonnonvalo ja orgaaninen taustasyvyys -->
+  <div class="ambient-daylight" aria-hidden="true"></div>
+  <div class="ambient-vignette" aria-hidden="true"></div>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <div class="content-wrapper">
+    <!-- Yläpalkki -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="./index.html" class="brand">
+          koneet.net <span class="brand-dot"></span>
+        </a>
+        <nav class="main-nav">
+          <a href="./index.html">← Takaisin etusivulle</a>
+          <a href="./index.html#yhteys" class="highlight">Varaa tila</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section" style="padding-top: 1rem;">
+      <span class="h2-sub">Valikoima</span>
+      <h1>Pelikoneet 1979–1999</h1>
+      
+      <p class="lead">
+        Esillä on aina <span>pätevä kattaus kaikkea laidasta laitaan</span>, mutta mainitse mikäli haluat varmistaa jonkin tietyn olevan valmiina ryhmääsi varten. Tämä lista täydentyy luonnollisesti kaiken tyyppisillä CRT-näytöillä, ikonisilla näytönohjaimilla, äänikorteilla, ohjaimilla ja legendaarisilla näppäimistöillä.
+      </p>
+
+      <!-- Suodattimet ja haku -->
+      <div class="catalog-controls-clean">
+        <input 
+          type="text" 
+          id="catalog-search" 
+          class="catalog-search-clean" 
+          placeholder="Hae konetta, peliä tai vuosilukua (esim. Amiga, Nintendo, Doom, 1986)..." 
+          aria-label="Hae laitetta"
+        />
+
+        <div class="catalog-filter-bar">
+          <button type="button" class="filter-btn-clean active" data-category="all">Kaikki (33)</button>
+          <button type="button" class="filter-btn-clean" data-category="konsoli">Pelikonsolit</button>
+          <button type="button" class="filter-btn-clean" data-category="mikro">Kotitietokoneet</button>
+          <button type="button" class="filter-btn-clean" data-category="pc">PC &amp; MikroMikot</button>
+          <button type="button" class="filter-btn-clean" data-category="vintage">Vintage &amp; Pong</button>
+        </div>
+      </div>
+
+      <!-- Konekatalogin lista -->
+      <div class="machines-list-clean" id="machines-list">
+        <!-- Renderöityy app.js:n kautta -->
+      </div>
+
+      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-hairline);">
+        <p class="bright" style="font-size: 1.15rem; margin-bottom: 0.5rem;">Haluatko jonkin näistä koneista viritettynä ryhmällesi?</p>
+        <p style="margin-bottom: 1.5rem;">Mainitse toiveesi varauksen yhteydessä, niin etsimme laitteet ja pelit valmiiksi esille.</p>
+        <a href="./index.html#yhteys" class="btn-clean">Siirry varauspyyntöön</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>&copy; 2026 koneet.net — Retrokellari Tampere</div>
+        <div><a href="./index.html">Etusivulle</a> • <a href="#">Takaisin ylös ↑</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
