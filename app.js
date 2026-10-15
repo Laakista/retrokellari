@@ -309,6 +309,7 @@ const MACHINES = [
 let selectedWishlist = new Set();
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileMenu();
   initScrollAnimations();
   initCalculator();
   initMachineCatalog();
@@ -316,6 +317,41 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initBookingForm();
 });
+
+// 0. MOBIILIVALIKKO
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const siteHeader = document.getElementById('site-header');
+  const drawer = document.getElementById('mobile-drawer');
+
+  if (!toggleBtn || !siteHeader || !drawer) return;
+
+  function toggleMenu() {
+    const isOpen = siteHeader.classList.toggle('menu-open');
+    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    drawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  }
+
+  toggleBtn.addEventListener('click', toggleMenu);
+
+  // Sulje valikko kun linkkiä klikataan
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      siteHeader.classList.remove('menu-open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  // Sulje valikko jos klikataan muualle sivulla
+  document.addEventListener('click', (e) => {
+    if (siteHeader.classList.contains('menu-open') && !siteHeader.contains(e.target)) {
+      siteHeader.classList.remove('menu-open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+    }
+  });
+}
 
 // 1. VIERITYKSEN SYVYYSVAIKUTELMA (PARALLAX & REVEAL)
 function initScrollAnimations() {

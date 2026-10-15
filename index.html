@@ -26,6 +26,29 @@
 
   <!-- Yläpalkki -->
   <header class="site-header" id="site-header">
+    <!-- Mobiilivalikon avautuva yläosa -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="container mobile-drawer-inner">
+        <nav class="mobile-nav-menu" aria-label="Mobiilinavigaatio">
+          <a href="#koneet" class="mobile-nav-link">Pelikoneet</a>
+          <a href="#miljoo" class="mobile-nav-link">Galleria</a>
+          <a href="#speksit" class="mobile-nav-link">Speksit</a>
+          <a href="#varaa" class="mobile-nav-link mobile-cta-link">Hinta &amp; varaus ↗</a>
+        </nav>
+        <div class="mobile-drawer-contact">
+          <div class="mobile-contact-item">
+            <span class="mobile-contact-label">Käyntiosoite</span>
+            <span class="mobile-contact-val">Sammonkatu 8 lt. 13, 33540 Tampere</span>
+          </div>
+          <div class="mobile-contact-item">
+            <span class="mobile-contact-label">Sähköposti</span>
+            <a href="mailto:info@koneet.net" class="mobile-contact-val mobile-mail-link">info@koneet.net</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Palkin alalaita (aina näkyvä palkki) -->
     <div class="container header-inner">
       <div class="brand-wrapper">
         <span class="brand-label"><span>RETRO</span>KELLARI</span>
@@ -37,6 +60,13 @@
         <a href="#speksit" class="nav-link">Speksit</a>
         <a href="#varaa" class="header-cta-btn">Hinta &amp; varaus</a>
       </nav>
+
+      <!-- Mobiilin hampurilaisikoni -->
+      <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Avaa valikko" aria-expanded="false">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+      </button>
     </div>
   </header>
 
@@ -62,7 +92,7 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#laskuri" class="btn-primary">
+          <a href="#varaa" class="btn-primary">
             Laske hinta &amp; varaa
           </a>
           <a href="#koneet" class="btn-secondary">
@@ -407,8 +437,7 @@
 
               <!-- 1. Päivämäärävalinta -->
               <div class="calc-date-group">
-                <div
-                  style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem;">
+                <div class="calc-date-header">
                   <label for="form-date" class="form-label" style="margin-bottom: 0;">Valitse päivä</label>
                   <span class="date-hint-tag" id="date-hint-tag">Valitse päivä kalenterista</span>
                 </div>
@@ -489,8 +518,8 @@
 
                 <div class="form-field-group form-full-width">
                   <label for="form-wishlist" class="form-label">Toivotut koneet ja pelit</label>
-                  <input type="text" id="form-wishlist" class="form-control-input"
-                    placeholder="Voit valita koneita yltä '+ Toivo tätä konetta' tai kirjoittaa esim. Amiga 500, Mario Kart, Doom..." />
+                  <textarea id="form-wishlist" class="form-control-input" rows="3"
+                    placeholder="Voit valita koneita yltä '+ Toivo tätä konetta' tai kirjoittaa esim. Amiga 500, Mario Kart, Doom..."></textarea>
                 </div>
 
                 <div class="form-field-group form-full-width">
@@ -503,7 +532,7 @@
                   <button type="submit" class="btn-primary" id="btn-submit-mail">
                     Lähetä varauspyyntö
                   </button>
-                  <a href="mailto:info@koneet.net" class="link-subtle" style="margin-left: auto;">
+                  <a href="mailto:info@koneet.net" class="link-subtle">
                     Tai laita suora sähköposti info@koneet.net ↗
                   </a>
                 </div>
@@ -518,12 +547,12 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-content">
-      <div>
+      <div class="footer-brand-info">
         <strong>Retrokellari</strong> • Sammonkatu 8 lt. 13, 33540 Tampere
       </div>
-      <div>
-        <a href="mailto:info@koneet.net" style="color: var(--primary-accent); margin-right: 1.5rem;">info@koneet.net</a>
-        <a href="#hero" style="color: var(--text-muted);">Ylös ↑</a>
+      <div class="footer-links-row">
+        <a href="mailto:info@koneet.net" class="footer-mail-link">info@koneet.net</a>
+        <a href="#hero" class="footer-up-link">Ylös ↑</a>
       </div>
     </div>
   </footer>
