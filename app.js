@@ -323,32 +323,62 @@ function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-toggle');
   const siteHeader = document.getElementById('site-header');
   const drawer = document.getElementById('mobile-drawer');
+  const overlay = document.getElementById('mobile-menu-overlay');
 
   if (!toggleBtn || !siteHeader || !drawer) return;
 
-  function toggleMenu() {
-    const isOpen = siteHeader.classList.toggle('menu-open');
+  function setMenuState(isOpen) {
+    siteHeader.classList.toggle('menu-open', isOpen);
     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     drawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    if (overlay) {
+      overlay.classList.toggle('is-active', isOpen);
+      overlay.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    }
+    document.body.classList.toggle('mobile-menu-active', isOpen);
   }
 
-  toggleBtn.addEventListener('click', toggleMenu);
+  function toggleMenu() {
+    const isOpen = !siteHeader.classList.contains('menu-open');
+    setMenuState(isOpen);
+  }
+
+  function closeMenu() {
+    setMenuState(false);
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  if (overlay) {
+    overlay.addEventListener('click', closeMenu);
+  }
 
   // Sulje valikko kun linkkiä klikataan
   drawer.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      siteHeader.classList.remove('menu-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      drawer.setAttribute('aria-hidden', 'true');
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   // Sulje valikko jos klikataan muualle sivulla
   document.addEventListener('click', (e) => {
-    if (siteHeader.classList.contains('menu-open') && !siteHeader.contains(e.target)) {
-      siteHeader.classList.remove('menu-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      drawer.setAttribute('aria-hidden', 'true');
+    if (siteHeader.classList.contains('menu-open') && !siteHeader.contains(e.target) && e.target !== overlay) {
+      closeMenu();
+    }
+  });
+
+  // Sulje valikko Escape-näppäimellä
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && siteHeader.classList.contains('menu-open')) {
+      closeMenu();
+    }
+  });
+
+  // Sulje valikko jos ikkunan leveys kasvaa yli mobiilirajan
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 680 && siteHeader.classList.contains('menu-open')) {
+      closeMenu();
     }
   });
 }
